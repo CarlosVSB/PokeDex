@@ -38,6 +38,64 @@ img{
 
 /* Cabeçalho */
 
+.btn-menu{
+    width: 56px;
+    height: 56px;
+    float: right;
+    text-align: center;
+    color: #fff;
+    border-radius: 56px;
+    cursor: pointer;
+    border: 1pt black solid;
+}
+
+.menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+}
+
+.btn-menu i{
+    color: rgba(167,51,51,1) ;
+}
+
+.btn-close{
+    font-size: 1.5em;
+    color: #fff;
+    float: right;
+    margin: 2% 3% 0 0;
+    cursor: pointer;
+}
+
+.menu ul{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.menu li{
+    padding: 1.5%;
+}
+
+.menu a li{
+    font-size: 2em;
+    color: #fff;
+    padding: 1.5% 3%;
+}
+
+.menu a li:hover{
+    color: rgba(167,51,51,1);
+}
+
+.mostra{
+    display: block;
+}
+
 header{
     flex: 0;
     display: flex;
@@ -68,30 +126,59 @@ div.logo p{
     font-size: 20pt;
 }
 
-nav ul{
-    display: flex;
-    justify-content: space-between;
-}
+@media screen and (min-width:960px) {
+    .btn-menu{
+        display: none;
+    }
+    
+    .btn-close{
+        display: none;
+    }
 
-nav ul a:first-child{
-    margin-left: 0px;
-}
+    nav.menu{
+        display: block !important;
+        float: right;
+        position: static;
+        width: auto;
+        font-size: 10pt;
+        height: auto;
+        background-color: rgba(2, 0, 36, 0);
+    }
+    /* .menu{
+        display: block !important;
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: #f5f5f5;
+        position: static;
+    } */
 
-nav a{
-    color: white;
-    padding: 10px;
-    margin: 0 5px;
-    background-color: rgb(141, 42, 42);
-    transition: 0.15s;
-}
-
-nav ul a:nth-child(5){
-    margin-right: 0px;
-}
-
-nav ul a:hover{
-    color: rgb(141, 42, 42);
-    background-color: white;
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav ul a:first-child{
+        margin-left: 0px;
+    }
+    
+    nav a{
+        color: white;
+        padding: 10px;
+        margin: 0 5px;
+        background-color: rgb(141, 42, 42);
+        transition: 0.15s;
+    }
+    
+    nav ul a:nth-child(5){
+        margin-right: 0px;
+    }
+    
+    nav ul a:hover{
+        color: rgb(141, 42, 42);
+        background-color: white;
+    }
 }
 
 

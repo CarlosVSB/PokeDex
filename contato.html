@@ -18,7 +18,9 @@
                 CarlãoDex
             </p>
         </div>
-        <nav class="menu">
+        <button class="btn-menu" onclick="mostraMenu()"><i class="fas fa-bars fa-lg"></i> </button>
+        <nav class="menu" id="menu">
+            <a href="#" class="btn-close" onclick="mostraMenu()"> <i class="fas fa-times"></i> </a>
             <ul>
                 <a href="index.html"><li>HOME</li></a>
                 <a href="dex.html"><li>POKEDEX</li></a>
@@ -52,5 +54,11 @@
     </footer>
 
     <script src="search_page.js"></script>
+    <script>
+        function mostraMenu() {
+            let elem = document.getElementById("menu");
+            elem.classList.toggle("mostra");
+        }
+    </script>
 </body>
 </html>
