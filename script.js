@@ -53,12 +53,14 @@ window.addEventListener('scroll',()=>{
 var loadscreen = document.querySelector('.load')
 var load = document.querySelector('.loading')
 
-function loading(){
+async function loading(){
     load.classList.add('show')
     loadscreen.classList.add('show')
-    document.getElementsByTagName('body')[0].style.overflow = 'hidden'
-    iniciar()
-    document.getElementsByTagName('body')[0].style.overflow = 'visible'
+    document.querySelector('body').style.overflow = 'hidden'
+    // document.body.classList.add("stop-scrolling");
+    await iniciar()
+    document.querySelector('body').style.overflow = 'visible'
+    // document.body.classList.remove("stop-scrolling");
 }
 
 

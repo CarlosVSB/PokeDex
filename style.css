@@ -12,6 +12,7 @@ body, h1, h2, p, ul, li, a{
 body{
     font-family: 'Baloo Bhaijaan 2', cursive;
     color: #222222;
+    /* overflow: hidden; */
 }
 
 ul{
@@ -25,6 +26,14 @@ a{
 img{
     display: block;
     max-width: 100%;
+}
+
+.stop-scrolling {
+
+    height: 100%;
+    
+    overflow: hidden;
+    
 }
 
 /* Cabeçalho */
