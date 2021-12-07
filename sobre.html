@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<body onload="altura2()" onresize="altura2()">
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="img/icone.png" alt="pokebola">
+            <p>
+                CarlãoDex
+            </p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <a href="index.html"><li>HOME</li></a>
+                <a href="dex.html"><li>POKEDEX</li></a>
+                <a href="buscar.html"><li>Buscar</li></a>
+                <a href="sobre.html"><li>Sobre</li></a>
+                <a href="contato.html"><li>Contato</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sobre">
+        <h2>Sobre o site</h2>
+        <p>CarlãoDex é uma pokedex em forma de site que utiliza somente das técnologias web básicas em sua estrutura (HTML,CSS e JavaScript).</p>
+        <p>O site obtem os dados de todos os pokemons atravez da API <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+        <p>O site foi feito como forma de projeto para aperfeiçoar as habilidades de programação WEB do desenvolvedor, que pode ser visto na aba <a href="contato.html">contato</a> .</p>
+        <p>O site pode mostrar listar todos os pokemons disponíveis na API como também buscar um pokemon para ver seus tipos, sprites e status base.</p>
+    </section>
+
+    <footer class="bus">
+        <p>&copy; CarlãoDex direitos não reservados (xô nintendo)</p>
+    </footer>
+
+    <script src="search_page.js"></script>
+</body>
+</html>
