@@ -7,6 +7,7 @@
 body, h1, h2, p, ul, li, a{
     margin: 0px;
     padding: 0px;
+    width: 100%;
 }
 
 body{
@@ -65,11 +66,12 @@ img{
 }
 
 .btn-close{
-    font-size: 1.5em;
+    max-width: 30px;
+    font-size: 2em;
     color: #fff;
     float: right;
-    margin: 2% 3% 0 0;
-    cursor: pointer;
+    margin: 2% 3% 0% 0%;
+    cursor: pointer
 }
 
 .menu ul{
@@ -93,11 +95,11 @@ img{
 }
 
 .mostra{
-    display: block;
+    display: block !important;
 }
 
 header{
-    flex: 0;
+    /* flex: 0; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -115,12 +117,13 @@ header img{
     align-self: center;
 }
 
-div.logo{
+div.logo a{
     display: flex;
     align-content: center;
 }
 
 div.logo p{
+    color: white;
     padding: 5px;
     font-weight: bold;
     font-size: 20pt;
@@ -192,7 +195,7 @@ section.main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 75vh;
+    /* min-height: 75vh; */
     margin: auto;
     width: 100%;
 }
@@ -393,6 +396,44 @@ div.res{
     }
 }
 
+@media screen and (max-width:460px) {
+    /* div.res{
+        grid-template-areas: 
+        "nome"
+        "tipo1"
+        "tipo2"
+        "sprite"
+        "sprite"
+        "sprite2"
+        "sprite2"
+        "num"
+        "stat"
+        "stat"
+        ;
+        width: 320px;
+        gap: 20px 0px;
+        padding: 15px;
+    } */
+    h2{
+        font-size: 20pt !important;
+    }
+    h1{
+        font-size: 30pt !important;
+    }
+    div.res{
+        display: flex;
+        width: 320px;
+        flex-wrap: wrap;
+        /* gap: 20px 0px; */
+        padding: 15px;
+    }
+    div#teste{
+        max-width: 300px;
+        justify-self: auto;
+        /* grid-template-columns: 230px 40px; */
+    }
+}
+
 .res{
     min-height: 100%;
 }
@@ -409,11 +450,13 @@ div.res{
 .res .sprite{
     grid-area: sprite;
     width: 100%;
+    align-self: center;
 }
 
 .res .sprite2{
     grid-area: sprite2;
     width: 100%;
+    align-self: center;
 }
 
 .res .tipo1{
@@ -457,11 +500,14 @@ div.res{
 
 
 div#teste{
+    align-self: center;
+    /* justify-self: center; */
     grid-area: stat;
     display: grid;
     grid-template-columns: 230px 40px;
     gap: 10px;
     width:310px;
+    max-height: 400px;
     padding: 10px;
     background-color: rgba(167,51,51,1);
     color: white;

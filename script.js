@@ -43,7 +43,7 @@ async function getPokemon(id){
 window.addEventListener('scroll',()=>{
     const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-    if (scrollTop + clientHeight >= scrollHeight ) {
+    if (scrollTop + clientHeight >= scrollHeight - 200 ) {
         // window.removeEventListener('scroll')
         // iniciar()
         loading()
@@ -63,6 +63,16 @@ async function loading(){
     // document.body.classList.remove("stop-scrolling");
 }
 
+
+function altura4(){
+    var res = document.querySelector('section.main')
+    var foot = document.querySelector('footer')
+    var pos =window.innerHeight
+    var pos2 = foot.getBoundingClientRect()
+    var pos3 = res.getBoundingClientRect()
+    // console.log(pos)
+    res.style.minHeight = `${pos-pos2.bottom+(pos3.bottom-pos3.top)}px`
+}
 
 
 async function iniciar() {
