@@ -39,14 +39,19 @@ async function getPokemon(id){
     return jeison
 }
 
-
+let is_running=false
 window.addEventListener('scroll',()=>{
     const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-    if (scrollTop + clientHeight >= scrollHeight - 200 ) {
+    if (scrollTop + clientHeight >= scrollHeight - 50 ) {
         // window.removeEventListener('scroll')
         // iniciar()
-        loading()
+        if (is_running) {
+            console.log('unable to start loading')
+        }else{
+            is_running=true
+            loading()
+        }
     }
 })
 
@@ -61,6 +66,7 @@ async function loading(){
     await iniciar()
     document.querySelector('body').style.overflow = 'visible'
     // document.body.classList.remove("stop-scrolling");
+    is_running=false
 }
 
 
